@@ -1,0 +1,68 @@
+body {
+    background: linear-gradient(
+      45deg,
+      #e0ddda,
+      #140a01,
+      #b36e06,
+      #f1f1f1,
+      #080808
+    ); 
+    background-size: 400% 400%; 
+    animation: gradientGlow 15s ease infinite; 
+  }
+  
+  /* Define the animation */
+  @keyframes gradientGlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .hero {
+    background: linear-gradient(
+      45deg,
+      #702e08,
+      #584b02,
+      #743903,
+      #3d1e02,
+      #502702
+    );
+    background-size: 400% 400%;
+    animation: gradientGlow 15s ease infinite;
+    position: relative; 
+  }
+  
+  @keyframes gradientGlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .hero {
+    position: relative;
+    overflow: hidden; /* Keeps the effect contained */
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Inherits the gradient from .hero */
+    filter: blur(20px); /* Adds a glowing blur */
+    z-index: -1; /* Places it behind the content */
+  }

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zesty Haven</title>
+
+    <link rel="stylesheet" href="./css/normalize.css" />
+    
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.pf.png">
+    <link rel="alternate icon" href="./assets/favicon.ico"> 
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png"> 
+   
+    
+    <link
+      rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/background.css">
+    
+    <style>
+     
+      .glow-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .glow {
+        position: absolute;
+        width: 150%;
+        height: 150%;
+        background: radial-gradient(
+          circle at center,
+          rgba(255, 107, 107, 0.15) 0%,
+          rgba(78, 205, 196, 0.15) 25%,
+          rgba(255, 182, 193, 0.15) 50%,
+          rgba(147, 112, 219, 0.15) 75%,
+          rgba(255, 107, 107, 0.15) 100%
+        );
+        filter: blur(60px);
+        transform: translate(-25%, -25%);
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .wave {
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          45deg,
+          rgba(255, 107, 107, 0.1),
+          rgba(78, 205, 196, 0.1),
+          rgba(255, 182, 193, 0.1),
+          rgba(147, 112, 219, 0.1)
+        );
+        animation: wave 15s linear infinite;
+        transform-origin: center;
+      }
+
+      @keyframes wave {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Add subtle hover effect to interactive elements */
+      .recipe, .nav-link, .btn {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .recipe:hover, .nav-link:hover, .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Add glowing background container -->
+    <div class="glow-container">
+      <div class="glow"></div>
+      <div class="wave"></div>
+    </div>
+    <!-- Splash Screen -->
+    <div class="splash-screen">
+      <div class="splash-content">
+        <img src="./assets/logo.png" alt="Zesty Haven Logo" class="splash-logo">
+        <h1 class="splash-title">Zesty Haven</h1>
+      </div>
+    </div>
+   
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <img src="./assets/logo.png" alt="Zesty Haven Logo" class="logo-img">
+            <span class="logo-text">Zesty Haven</span>
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link active"> home </a>
+          <a href="about.html" class="nav-link"> about </a>
+          <a href="tags.html" class="nav-link"> tags </a>
+          <a href="recipes.html" class="nav-link"> recipes </a>
+
+          <div class="nav-link contact-link">
+            <a href="contact.html" class="btn"> contact </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+   
+    
+    <main class="page">
+      <!-- header -->
+      <header class="hero">
+        <div class="hero-container">
+          <div class="hero-text">
+            <h1>Zesty Haven</h1>
+            <h4>Elevate your everyday meals</h4>
+            <a href="recipes.html" class="btn btn-hero">explore recipes</a>
+          </div>
+        </div>
+      </header>
+      
+      
+
+      <!-- featured recipes -->
+      <section class="featured-recipes">
+        <h2 class="section-title">Featured Recipes</h2>
+        <div class="recipes-container">
+          <!-- recipes list -->
+          <div class="recipes-list">
+            <!-- single recipe -->
+            <a href="single-recipe.html?recipe=Carne Asada" class="recipe">
+              <div class="recipe-img-container">
+                <img
+                  src="./assets/recipes/recipe-1.jpeg"
+                  class="img recipe-img"
+                  alt="Carne Asada"
+                />
+                <div class="recipe-overlay">View Recipe</div>
+              </div>
+              <div class="recipe-info">
+                <div class="recipe-tags">
+                  <span>Dinner</span>
+                  <span>Beef</span>
+                </div>
+                <h5>Carne Asada</h5>
+                <p><i class="far fa-clock"></i> Prep: 15min | Cook: 5min</p>
+                <div class="recipe-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span>(4.5)</span>
+                </div>
+              </div>
+            </a>
+            <!-- end of single recipe -->
+            <!-- single recipe -->
+            <a href="single-recipe.html?recipe=Greek Ribs" class="recipe">
+              <div class="recipe-img-container">
+                <img
+                  src="./assets/recipes/recipe-2.jpeg"
+                  class="img recipe-img"
+                  alt="Greek Ribs"
+                />
+                <div class="recipe-overlay">View Recipe</div>
+              </div>
+              <div class="recipe-info">
+                <div class="recipe-tags">
+                  <span>Dinner</span>
+                  <span>Pork</span>
+                </div>
+                <h5>Greek Ribs</h5>
+                <p><i class="far fa-clock"></i> Prep: 15min | Cook: 5min</p>
+                <div class="recipe-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>(4.0)</span>
+                </div>
+              </div>
+            </a>
+            <!-- end of single recipe -->
+            <!-- single recipe -->
+            <a href="single-recipe.html?recipe=Vegetable Soup" class="recipe">
+              <div class="recipe-img-container">
+                <img
+                  src="./assets/recipes/recipe-3.jpeg"
+                  class="img recipe-img"
+                  alt="Vegetable Soup"
+                />
+                <div class="recipe-overlay">View Recipe</div>
+              </div>
+              <div class="recipe-info">
+                <div class="recipe-tags">
+                  <span>Lunch</span>
+                  <span>Vegan</span>
+                </div>
+                <h5>Vegetable Soup</h5>
+                <p><i class="far fa-clock"></i> Prep: 15min | Cook: 5min</p>
+                <div class="recipe-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span>(5.0)</span>
+                </div>
+              </div>
+            </a>
+            <!-- end of single recipe -->
+            <!-- single recipe -->
+            <a href="single-recipe.html?recipe=Banana Pancakes" class="recipe">
+              <div class="recipe-img-container">
+                <img
+                  src="./assets/recipes/recipe-4.jpeg"
+                  class="img recipe-img"
+                  alt="Banana Pancakes"
+                />
+                <div class="recipe-overlay">View Recipe</div>
+              </div>
+              <div class="recipe-info">
+                <div class="recipe-tags">
+                  <span>Breakfast</span>
+                  <span>Sweet</span>
+                </div>
+                <h5>Banana Pancakes</h5>
+                <p><i class="far fa-clock"></i> Prep: 15min | Cook: 5min</p>
+                <div class="recipe-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>(4.0)</span>
+                </div>
+              </div>
+            </a>
+            <!-- end of single recipe -->
+            <!-- single recipe -->
+            <a href="single-recipe.html?recipe=Spicy Tuna Bowl" class="recipe">
+              <div class="recipe-img-container">
+                <img
+                  src="./assets/recipes/recipe-5.jpeg"
+                  class="img recipe-img"
+                  alt="Spicy Tuna Bowl"
+                />
+                <div class="recipe-overlay">View Recipe</div>
+              </div>
+              <div class="recipe-info">
+                <div class="recipe-tags">
+                  <span>Lunch</span>
+                  <span>Seafood</span>
+                </div>
+                <h5>Spicy Tuna Bowl</h5>
+                <p><i class="far fa-clock"></i> Prep: 20min | Cook: 10min</p>
+                <div class="recipe-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span>(4.7)</span>
+                </div>
+              </div>
+            </a>
+            <!-- end of single recipe -->
+            <!-- single recipe -->
+            <a href="single-recipe.html?recipe=Chocolate Lava Cake" class="recipe">
+              <div class="recipe-img-container">
+                <img
+                  src="./assets/recipes/recipe-6.jpeg"
+                  class="img recipe-img"
+                  alt="Chocolate Lava Cake"
+                />
+                <div class="recipe-overlay">View Recipe</div>
+              </div>
+              <div class="recipe-info">
+                <div class="recipe-tags">
+                  <span>Dessert</span>
+                  <span>Chocolate</span>
+                </div>
+                <h5>Chocolate Lava Cake</h5>
+                <p><i class="far fa-clock"></i> Prep: 15min | Cook: 12min</p>
+                <div class="recipe-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span>(4.9)</span>
+                </div>
+              </div>
+            </a>
+            <!-- end of single recipe -->
+          </div>
+          <div class="view-all-btn">
+            <a href="recipes.html" class="btn">View All Recipes</a>
+          </div>
+        </div>
+      </section>
+      
+      </section>
+    </main>
+    <!-- end of main -->
+    <!-- footer -->
+    <footer class="page-footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="./assets/logo.png" alt="Zesty Haven Logo" class="footer-logo-img">
+          <span>Zesty Haven</span>
+          <p>Elevate your everyday meals</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="date"></span>
+          <span>Zesty Haven</span> All rights reserved
+        </p>
+      </div>
+    </footer>
+    <script>
+      // Dynamically update the year
+      document.getElementById('date').textContent = new Date().getFullYear();
+    </script>
+    <script src="./js/app.js"></script>
+    <script>
+      // Glowing background effect
+      const glow = document.querySelector('.glow');
+      const container = document.querySelector('.glow-container');
+
+      document.addEventListener('mousemove', (e) => {
+        const { clientX, clientY } = e;
+        const { left, top, width, height } = container.getBoundingClientRect();
+        
+        // Calculate mouse position relative to container
+        const x = (clientX - left) / width;
+        const y = (clientY - top) / height;
+        
+        // Move glow effect
+        glow.style.transform = `translate(${x * 50 - 25}%, ${y * 50 - 25}%)`;
+      });
+
+      // Add subtle movement on scroll
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        glow.style.transform = `translateY(${scrolled * 0.1}px)`;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tags - Zesty Haven</title>
+
+    <link rel="stylesheet" href="./css/normalize.css" />
+    
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.pf.png">
+    <link rel="alternate icon" href="./assets/favicon.ico"> 
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png"> 
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/background.css" />
+
+  </head>
+  <body>
+   
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <img src="./assets/logo.png" alt="Zesty Haven Logo" class="logo-img">
+            <span class="logo-text">Zesty Haven</span>
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link"> home </a>
+          <a href="about.html" class="nav-link"> about </a>
+          <a href="tags.html" class="nav-link active"> tags </a>
+          <a href="recipes.html" class="nav-link"> recipes </a>
+
+          <div class="nav-link contact-link">
+            <a href="contact.html" class="btn"> contact </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+   
+    <main class="page">
+      <!-- header -->
+      <header class="hero tags-hero">
+        <div class="hero-container">
+          <div class="hero-text">
+            <h1>Recipe Tags</h1>
+            <h4>Discover recipes by category</h4>
+          </div>
+        </div>
+      </header>
+      
+      <!-- tags section -->
+      <section class="tags-section">
+        <h2 class="section-title">Explore Our Tags</h2>
+        <div class="tags-container">
+          <a href="tag-template.html?tag=Breakfast" class="tag-item">
+            <div class="tag-img">
+              <img src="./assets/recipes/Bf.jpg" alt="Breakfast Recipes" />
+            </div>
+            <h5>Breakfast</h5>
+            <span class="tag-count"></span>
+          </a>
+          <a href="tag-template.html?tag=Lunch" class="tag-item">
+            <div class="tag-img">
+              <img src="./assets/recipes/lunch.jpg" alt="Lunch Recipes" />
+            </div>
+            <h5>Lunch</h5>
+            <span class="tag-count"></span>
+          </a>
+          <a href="tag-template.html?tag=Dinner" class="tag-item">
+            <div class="tag-img">
+              <img src="./assets/recipes/dinner.jpg" alt="Dinner Recipes" />
+            </div>
+            <h5>Dinner</h5>
+            <span class="tag-count"></span>
+          </a>
+          <a href="tag-template.html?tag=Dessert" class="tag-item">
+            <div class="tag-img">
+              <img src="./assets/recipes/dessert.jpg" alt="Dessert Recipes" />
+            </div>
+            <h5>Dessert</h5>
+            <span class="tag-count"></span>
+          </a>
+          <a href="tag-template.html?tag=Vegan" class="tag-item">
+            <div class="tag-img">
+              <img src="./assets/recipes/vegan.jpg" alt="Vegan Recipes" />
+            </div>
+            <h5>Vegan</h5>
+            <span class="tag-count"></span>
+          </a>
+          <a href="tag-template.html?tag=Seafood" class="tag-item">
+            <div class="tag-img">
+              <img src="./assets/recipes/seafood.jpg" alt="Seafood Recipes" />
+            </div>
+            <h5>Seafood</h5>
+            <span class="tag-count"></span>
+          </a>
+          <a href="tag-template.html?tag=Beef" class="tag-item">
+            <div class="tag-img">
+              <img src="./assets/recipes/beef.jpg" alt="Beef Recipes" />
+            </div>
+            <h5>Beef</h5>
+            <span class="tag-count"></span>
+          </a>
+          <a href="tag-template.html?tag=Pork" class="tag-item">
+            <div class="tag-img">
+              <img src="./assets/recipes/pork.jpg" alt="Pork Recipes" />
+            </div>
+            <h5>Pork</h5>
+            <span class="tag-count"></span>
+          </a>
+        </div>
+      </section>
+      
+      <style>
+      .tags-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      
+      .tag-item {
+        text-decoration: none;
+        color: inherit;
+        text-align: center;
+      }
+      
+      .tag-img {
+        height: 250px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-bottom: 10px;
+      }
+      
+      .tag-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      
+      .tag-item:hover .tag-img img {
+        transform: scale(1.1);
+      }
+      
+      .tag-item h5 {
+        margin: 10px 0 5px;
+        font-weight: bold;
+      }
+      
+      .tag-count {
+        color: #666;
+        font-size: 0.9em;
+      }
+      
+      @media (max-width: 1024px) {
+        .tags-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .tags-container {
+          grid-template-columns: 1fr;
+        }
+      }
+      </style>
+
+      <script src="./js/tag-data.js"></script>
+      <script>
+        // Update the tag counts dynamically
+        document.querySelectorAll('.tag-item').forEach(function(tagItem) {
+          const tagName = tagItem.querySelector('a').getAttribute('href').split('=')[1];
+          const tagCount = tagConfigs[tagName] ? tagConfigs[tagName].recipes.length : 0;
+          tagItem.querySelector('.tag-count').textContent = `${tagCount} Recipes`;
+        });
+      </script>
+    </main>
+
+    <!-- footer -->
+    <footer class="page-footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="./assets/logo.png" alt="Zesty Haven Logo" class="footer-logo-img">
+          <span>Zesty Haven</span>
+          <p>Elevate your everyday meals</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="date"></span>
+          <span>Zesty Haven</span> All rights reserved
+        </p>
+      </div>
+    </footer>
+    <script>
+      // Dynamically update the year
+      document.getElementById('date').textContent = new Date().getFullYear();
+    </script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

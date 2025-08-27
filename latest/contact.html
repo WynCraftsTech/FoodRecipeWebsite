@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes - Zesty Haven</title>
+
+    <link rel="stylesheet" href="./css/normalize.css" />
+    
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.pf.png">
+    <link rel="alternate icon" href="./assets/favicon.ico"> 
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png"> 
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+
+  </head>
+  <body>
+    <!-- nav  -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <img src="./assets/logo.png" alt="Zesty Haven Logo" class="logo-img">
+            <span class="logo-text">Zesty Haven</span>
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link"> home </a>
+          <a href="about.html" class="nav-link"> about </a>
+          <a href="tags.html" class="nav-link"> tags </a>
+          <a href="recipes.html" class="nav-link"> recipes </a>
+
+          <div class="nav-link contact-link active">
+            <a href="contact.html" class="btn"> contact </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end of nav -->
+    <main class="page">
+      <!-- contact section -->
+      <section class="contact-section">
+        <div class="contact-container">
+          <div class="contact-info">
+            <h2 class="contact-title">Get In Touch</h2>
+            <p class="contact-text">
+              Have a question or suggestion? We'd love to hear from you! 
+              Fill out the form and we'll get back to you as soon as possible.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Address</h4>
+                  <p>123 Food Street, Culinary City</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h4>Phone</h4>
+                  <p>+1 234 567 890</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>info@zestyhaven.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h4>Working Hours</h4>
+                  <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                </div>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer">
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="date"></span>
+          <span>Zesty Haven</span> All rights reserved
+        </p>
+      </div>
+    </footer>
+    <script>
+      // Dynamically update the year
+      document.getElementById('date').textContent = new Date().getFullYear();
+    </script>
+    <script src="./js/app.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Handle directory requests
+DirectoryIndex index.html
+
+# Prevent directory listing
+Options -Indexes
+
+# Set default character set
+AddDefaultCharset UTF-8
+
+# Enable CORS for fonts
+<FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css)$">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+
+# Cache control for static assets
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+    Header set Cache-Control "max-age=31536000, public"
+</FilesMatch> 
